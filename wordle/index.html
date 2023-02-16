@@ -8,5 +8,47 @@
   </head>
   <body>
     <script src="./wordle.js"></script>
+    <div class="first_container">
+      <div id="header"><h1>Worlde</h1></div>
+      <div id="space"><button id="darkMode" class="buttonTop">&#9681</button>
+        <button id="hintbutton" class ="buttonTop">&#63</button>
+        <button id="instructbut" class ="buttonTop" >&#9432</button></div>
+      
+
+    </div>
+    <div class="second_container" id="second_container">
+      <div class="leftcolum">
+        <div id="board">
+        </div>
+        
+      </div>
+      
+      <div>
+        
+        <ol id="instructions" class="hidden">
+          <h2>How to play</h2>
+          <li>Start typing. The letters will appear in the box</li>
+          <li>Remove letters with Backspace</li>
+          <li>Hit Enter/Return to submit an answer</li>
+          <li>Letters with green background are in the right spot</li>
+          <li>Letters with yellow background exist in the word, but are in the wrong spots</li>
+          <li>letters with gray backgrounddo not exit in the word","If you need a hint, click the ? icon</li>
+        </ol></div></div>
+      <div class="startOver"><button type="button" id="startOver">Start Over</button></div>
+      
+      
+
+
+    </div>
+    
+    <div class="char_display"><div id="char"></div></div>
+
+    <div class="third_container">
+      <div id="hint_content"></div>
+      
+    </div>
+    <div id="word" class="hidden"></div>
+    <div class="footer">Thanh Nguyen &#169 2023</div>
+
   </body>
 </html>

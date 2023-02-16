@@ -1,4 +1,261 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+
+}
+
+:root {
+  --primary-color: #FFFFFF;
+  --secondary-color: #202124;
+}
+
+.dark-theme {
+  --primary-color: #202124;
+  --secondary-color: #FFFFFF;
+  background-color: #202124;
+}
+
+.first_container {
+  display: flex;
+  flex-direction: row;
+  /*padding: 0px;
+  margin: 0px;
+  background-color: black;*/
+  border-bottom: 1px solid rgb(218, 218, 218);
+  background-color: var(--primary-color);
+  align-items: center;
+  justify-content: center;
+  padding-left: 320px;
+  margin: 0;
+  color: var(--primary-color);
+}
+
+#header {
+  /*background-color: brown;*/
+  color: var(--secondary-color);
+  /*bacdkground-color: aqua;*/
+  justify-content: right;
+  padding-left: 50px;
+  background-color: var(--primary-color);
+  padding-right: 50px;
+  margin-left: 200px;
+}
+
+#space {
+  display: flex;
+  flex-direction: row;
+  /*background-color: aquamarine;*/
+  flex: 0.6;
+  justify-content: right;
+  background-color: var(--primary-color);
+  padding-left: 350px;
+
+}
+
+#space {
+  flex: 0.4;
+
+  /*background-color: aqua;*/
+}
+
+.second_container {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--primary-color);
+  padding-bottom: 10px;
+  padding-top: 20pxpx;
+
+}
+
+.third_container {
+
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  margin-top: 20px;
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  background-color: var(--primary-color);
+
+}
+
+.smallBlock {
+  border: 1px solid rgb(218, 218, 218);
+  min-width: 60px;
+  min-height: 60px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  border-color: var(--secondary-color);
+  background-color: var(--primary-color);
+  color: var(--secondary-color)
+    /*-webkit-text-fill-color: var(--secondary-color);*/
+
+}
+
+#startOver {
+  min-width: 100px;
+  min-height: 40px;
+  border-radius: 8px;
+  background-color: rgb(117, 182, 126);
+  color: var(--primary-color);
+}
+
+.right {
+  background-color: rgb(16, 160, 182);
+}
+
+.wrong {
+  background-color: hsl(33, 100%, 88%);
+}
+
+.right {
+  background-color: green;
+}
+
+.left {
+  background-color: yellow;
+}
+
+.dontHave {
+  background-color: gray;
+  color: white;
+}
+
+.defaultColour {
+  background-color: white;
+}
+
+.hint_appiled {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  color: var(--secondary-color);
+  background-color: antiquewhite;
+  width: 100%;
+  text-align: center;
+
+}
+
+.buttonTop {
+  border-color: var(--secondary-color);
+  margin-right: 20px;
+  border-radius: 50%;
+
+}
+
+.startOver {
+  background-color: var(--primary-color);
+
+  justify-content: center;
+  display: flex;
+}
+
+.char_display {
+  display: flex;
+  padding: 40px;
+  background-color: var(--primary-color);
+  justify-content: center;
+  padding-bottom: 200px;
+}
+
+#char {
+  display: flex;
+  max-width: 100px;
+  max-height: 50px;
+  background-color: var(--primary-color);
+  border-color: 1px var(--secondary-color);
+}
+
+.hidden {
+  display: none;
+}
+
+#instructions {
+  padding-bottom: 50px;
+  border-left: 1px solid rgb(218, 218, 218);
+  padding-right: 100px;
+  margin-top: -16px;
+  padding-bottom: 100px;
+  padding-top: 150px;
+  margin-left: 20px;
+  color: var(--secondary-color);
+
+  margin-block-end: none;
+}
+
+#char {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 800px;
+  font-size: small;
+  border-radius: 8px;
+  color: var(--primary-color);
+  background-color: grey;
+  ;
+
+}
+
+.ima {
+  align-items: center;
+  margin-top: 20px;
+}
+
+.startOver {
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  display: flex;
+  border-top: 1px solid rgb(218, 218, 218);
+  bottom: 0;
+  position: fixed;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+
+
+
+}
+
+#hint_content {
+  background-color: bisque;
+  margin-bottom: 0px;
+  border-radius: 8px;
+  color: var(--secondary-color);
+}
+
+#word {
+  background-color: var(--primary-color);
+  margin-bottom: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 8px;
 }
