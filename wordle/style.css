@@ -153,7 +153,8 @@ body {
 }
 
 .buttonTop {
-  border-color: var(--secondary-color);
+  border:none;
+  background-color: var(--primary-color);
   margin-right: 20px;
   border-radius: 50%;
 
