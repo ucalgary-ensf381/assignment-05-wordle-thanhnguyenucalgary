@@ -11,18 +11,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
     }
+    const button = document.getElementById("startOver");
+    let dictionary;
     const getData = async () => {
         const res = await fetch("https://api.masoudkf.com/v1/wordle", {
             headers: {
                 "x-api-key": "sw0Tr2othT1AyTQtNDUE06LqMckbTiKWaVYhuirv",
             },
         });
-        let json = await res.json();
-        return json;
-    }
+        return await res.json();
+    };
     wordle = "";
     hint = "";
-    let dictionary;
     const getWord = async (shouldFetch = true) => {
         if (shouldFetch) {
             data = await getData();
@@ -35,10 +35,19 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(hint);
 
     }
-    const button = document.getElementById("startOver");
+    window.addEventListener('online', function(event) {
+        location.reload();
+      });
+    //check if the wifi is not working
+    window.addEventListener('offline', function(event) {
+        button.disabled = true;
+        button.innerText="Loading...";
+        sconsole.log("Loading...");
+      });
     document.getElementById("startOver").addEventListener("click", () => {
         startover();
     }
+
     );
     const button1 = document.getElementById("hintbutton");
     document.getElementById("hintbutton").addEventListener("click", () => {
@@ -199,6 +208,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
     function startover() {
+        if(document.getElementById("hint_content")){
+            document.getElementById("hint_content").classList.add("hidden");}
         document.getElementById("hintbutton").disabled = false;
         if(document.getElementById("word")){
             let word =document.getElementById("word")
